@@ -6,13 +6,13 @@
 title: 欧阳德才
 subtitle: day day no bug
 description:
-author: Fonture Ouyang
+author: Tomee
 language: zh-Hans
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://oydc.me/blog
+url: http://ouyangdecai.com/blog
 root: /blog/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -70,7 +70,7 @@ theme: next
 deploy:
   type: git
 
-  repo: https://github.com/fonture/blog.git
+  repo: https://github.com/fonture/blog_repo.git
 
   branch: master
 
