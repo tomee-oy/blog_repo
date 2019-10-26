@@ -13,7 +13,7 @@ timezone:
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://ouyangdecai.com/blog/dist
-root: /blog/dist/
+root: ../dist/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
@@ -70,7 +70,7 @@ theme: next
 deploy:
   type: git
 
-  repo: https://github.com/fonture/blog.git
+  repo: https://github.com/fonture/blog.git/dist
 
   branch: master
 
