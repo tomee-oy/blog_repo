@@ -6,20 +6,20 @@
 title: 欧阳德才
 subtitle: day day no bug
 description:
-author: Tomee Ouyang
+author: Fonture Ouyang
 language: zh-Hans
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://ouyangdecai.com/blog
-root: /
+url: http://ouyangdecai.com
+root: /blog/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
 # Directory
 source_dir: source
-public_dir: ./
+public_dir: public
 tag_dir: tags
 archive_dir: archives
 selections_dir: selections

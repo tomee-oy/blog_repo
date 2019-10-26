@@ -12,7 +12,7 @@ categories: 技术
 这篇文章的开头似乎让人觉得有点随意，它讲述的是selections的内部工作原理而并非设计的动机，因此你可能会疑问为什么要以这种方式呈现。很简单，在解释所有东西是如何工作之前，先把所有的东西放在一起比较容易。等你读到最后，设计意图和功能也逐渐清晰。
 
 D3是一个可视化库，因此这篇文章会伴随讲解一些可视化方面的知识。在下面的示意图中，左边的图将会展示selections的结构，右边的图将会展示数据结构。
-![](selections/join.jpg)
+![selections join](selections/join.jpg)
 
 圆角矩形比如：<span style="background:rgb(217,217,217);padding:3px 5px;border-radius:5px;">thing</span>表示各种类型的JavaScript对象，包括对象字面量，数字组成的数组以及DOM元素。确定的对象类型用不同的颜色标识，包括<span style="border:1px solid rgb(227,86,33);padding:3px 5px;border-radius:5px;">selection</span>、<span style="border:1px solid rgb(97,97,97);padding:3px 5px;border-radius:5px;">array</span>以及<span style="background:rgb(185,185,185);padding:3px 5px;border-radius:5px;">element</span>。从一个对象到另一个对象的引用用关联线来表示（——）。比如，一个包含数字42的数组是这样的：
 
