@@ -6,7 +6,7 @@
 title: 欧阳德才
 subtitle: day day no bug
 description:
-author: Tomee
+author: Tomee Ouyang
 language: zh-Hans
 timezone:
 
@@ -19,7 +19,7 @@ permalink_defaults:
 
 # Directory
 source_dir: source
-public_dir: dist
+public_dir: public
 tag_dir: tags
 archive_dir: archives
 selections_dir: selections
@@ -70,7 +70,7 @@ theme: next
 deploy:
   type: git
 
-  repo: https://github.com/fonture/blog_repo.git
+  repo: https://github.com/fonture/blog.git
 
   branch: master
 
