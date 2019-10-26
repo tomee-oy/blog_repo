@@ -88,37 +88,37 @@
 <meta name="keywords" content="d3,好文翻译">
 <meta property="og:type" content="article">
 <meta property="og:title" content="selections工作原理">
-<meta property="og:url" content="http://ouyangdecai.com/blog/2017/11/04/selections/index.html">
+<meta property="og:url" content="http://ouyangdecai.com/2017/11/04/selections/index.html">
 <meta property="og:site_name" content="欧阳德才">
 <meta property="og:description" content="原文链接：https://bost.ocks.org/mike/selection/ 以前，我对D3的选择集有过一些简单的描述，其中的讲解仅限于入门。 这篇文章以更加全面的方式讲解如何使用选择集，我会说明选择集是如何执行的。这篇文章有点长，但它将消除你的诸多疑虑并助你掌握数据驱动文档（Data-Drive Documents）。 这篇文章的开头似乎让人觉得有点随意，它讲述的是selections的">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://ouyangdecai.com/blog/2017/11/04/dist/blog/dist/2017/11/04/selections/join.jpg">
-<meta property="og:image" content="http://ouyangdecai.com/blog/2017/11/04/dist/blog/dist/2017/11/04/selections/1.jpg">
-<meta property="og:image" content="http://ouyangdecai.com/blog/2017/11/04/dist/blog/dist/2017/11/04/selections/2.gif">
-<meta property="og:image" content="http://ouyangdecai.com/blog/2017/11/04/dist/blog/dist/2017/11/04/selections/3.gif">
-<meta property="og:image" content="http://ouyangdecai.com/blog/2017/11/04/dist/blog/dist/2017/11/04/selections/4.jpg">
-<meta property="og:image" content="http://ouyangdecai.com/blog/2017/11/04/dist/blog/dist/2017/11/04/selections/5.jpg">
-<meta property="og:image" content="http://ouyangdecai.com/blog/2017/11/04/dist/blog/dist/2017/11/04/selections/6.jpg">
-<meta property="og:image" content="http://ouyangdecai.com/blog/2017/11/04/dist/blog/dist/2017/11/04/selections/7.jpg">
-<meta property="og:image" content="http://ouyangdecai.com/blog/2017/11/04/dist/blog/dist/2017/11/04/selections/8.jpg">
-<meta property="og:image" content="http://ouyangdecai.com/blog/2017/11/04/dist/blog/dist/2017/11/04/selections/9.jpg">
-<meta property="og:image" content="http://ouyangdecai.com/blog/2017/11/04/dist/blog/dist/2017/11/04/selections/10.jpg">
-<meta property="og:image" content="http://ouyangdecai.com/blog/2017/11/04/dist/blog/dist/2017/11/04/selections/11.jpg">
-<meta property="og:image" content="http://ouyangdecai.com/blog/2017/11/04/dist/blog/dist/2017/11/04/selections/12.jpg">
-<meta property="og:image" content="http://ouyangdecai.com/blog/2017/11/04/dist/blog/dist/2017/11/04/selections/13.jpg">
-<meta property="og:image" content="http://ouyangdecai.com/blog/2017/11/04/dist/blog/dist/2017/11/04/selections/14.jpg">
-<meta property="og:image" content="http://ouyangdecai.com/blog/2017/11/04/dist/blog/dist/2017/11/04/selections/15.jpg">
-<meta property="og:image" content="http://ouyangdecai.com/blog/2017/11/04/dist/blog/dist/2017/11/04/selections/16.jpg">
-<meta property="og:image" content="http://ouyangdecai.com/blog/2017/11/04/dist/blog/dist/2017/11/04/selections/17.jpg">
-<meta property="og:image" content="http://ouyangdecai.com/blog/2017/11/04/dist/blog/dist/2017/11/04/selections/18.gif">
-<meta property="og:image" content="http://ouyangdecai.com/blog/2017/11/04/dist/blog/dist/2017/11/04/selections/19.gif">
-<meta property="og:image" content="http://ouyangdecai.com/blog/2017/11/04/dist/blog/dist/2017/11/04/selections/20.gif">
-<meta property="og:image" content="http://ouyangdecai.com/blog/2017/11/04/dist/blog/dist/2017/11/04/selections/21.jpg">
+<meta property="og:image" content="http://ouyangdecai.com/2017/11/04/dist/blog/dist/2017/11/04/selections/join.jpg">
+<meta property="og:image" content="http://ouyangdecai.com/2017/11/04/dist/blog/dist/2017/11/04/selections/1.jpg">
+<meta property="og:image" content="http://ouyangdecai.com/2017/11/04/dist/blog/dist/2017/11/04/selections/2.gif">
+<meta property="og:image" content="http://ouyangdecai.com/2017/11/04/dist/blog/dist/2017/11/04/selections/3.gif">
+<meta property="og:image" content="http://ouyangdecai.com/2017/11/04/dist/blog/dist/2017/11/04/selections/4.jpg">
+<meta property="og:image" content="http://ouyangdecai.com/2017/11/04/dist/blog/dist/2017/11/04/selections/5.jpg">
+<meta property="og:image" content="http://ouyangdecai.com/2017/11/04/dist/blog/dist/2017/11/04/selections/6.jpg">
+<meta property="og:image" content="http://ouyangdecai.com/2017/11/04/dist/blog/dist/2017/11/04/selections/7.jpg">
+<meta property="og:image" content="http://ouyangdecai.com/2017/11/04/dist/blog/dist/2017/11/04/selections/8.jpg">
+<meta property="og:image" content="http://ouyangdecai.com/2017/11/04/dist/blog/dist/2017/11/04/selections/9.jpg">
+<meta property="og:image" content="http://ouyangdecai.com/2017/11/04/dist/blog/dist/2017/11/04/selections/10.jpg">
+<meta property="og:image" content="http://ouyangdecai.com/2017/11/04/dist/blog/dist/2017/11/04/selections/11.jpg">
+<meta property="og:image" content="http://ouyangdecai.com/2017/11/04/dist/blog/dist/2017/11/04/selections/12.jpg">
+<meta property="og:image" content="http://ouyangdecai.com/2017/11/04/dist/blog/dist/2017/11/04/selections/13.jpg">
+<meta property="og:image" content="http://ouyangdecai.com/2017/11/04/dist/blog/dist/2017/11/04/selections/14.jpg">
+<meta property="og:image" content="http://ouyangdecai.com/2017/11/04/dist/blog/dist/2017/11/04/selections/15.jpg">
+<meta property="og:image" content="http://ouyangdecai.com/2017/11/04/dist/blog/dist/2017/11/04/selections/16.jpg">
+<meta property="og:image" content="http://ouyangdecai.com/2017/11/04/dist/blog/dist/2017/11/04/selections/17.jpg">
+<meta property="og:image" content="http://ouyangdecai.com/2017/11/04/dist/blog/dist/2017/11/04/selections/18.gif">
+<meta property="og:image" content="http://ouyangdecai.com/2017/11/04/dist/blog/dist/2017/11/04/selections/19.gif">
+<meta property="og:image" content="http://ouyangdecai.com/2017/11/04/dist/blog/dist/2017/11/04/selections/20.gif">
+<meta property="og:image" content="http://ouyangdecai.com/2017/11/04/dist/blog/dist/2017/11/04/selections/21.jpg">
 <meta property="og:updated_time" content="2019-10-26T06:51:53.170Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="selections工作原理">
 <meta name="twitter:description" content="原文链接：https://bost.ocks.org/mike/selection/ 以前，我对D3的选择集有过一些简单的描述，其中的讲解仅限于入门。 这篇文章以更加全面的方式讲解如何使用选择集，我会说明选择集是如何执行的。这篇文章有点长，但它将消除你的诸多疑虑并助你掌握数据驱动文档（Data-Drive Documents）。 这篇文章的开头似乎让人觉得有点随意，它讲述的是selections的">
-<meta name="twitter:image" content="http://ouyangdecai.com/blog/2017/11/04/dist/blog/dist/2017/11/04/selections/join.jpg">
+<meta name="twitter:image" content="http://ouyangdecai.com/2017/11/04/dist/blog/dist/2017/11/04/selections/join.jpg">
 
 
 
@@ -146,7 +146,7 @@
 
 
 
-  <link rel="canonical" href="http://ouyangdecai.com/blog/2017/11/04/selections/">
+  <link rel="canonical" href="http://ouyangdecai.com/2017/11/04/selections/">
 
 
 
@@ -285,7 +285,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://ouyangdecai.com/blog/blog/2017/11/04/selections/">
+  <link itemprop="mainEntityOfPage" href="http://ouyangdecai.com/blog/2017/11/04/selections/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Tomee Ouyang">
