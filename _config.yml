@@ -12,7 +12,7 @@ timezone:
 
 # URL
 url: http://ouyangdecai.com
-root: /tomee/blog/
+# root: /tomee/blog/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
