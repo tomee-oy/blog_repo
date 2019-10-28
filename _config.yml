@@ -12,13 +12,13 @@ timezone:
 
 # URL
 url: http://ouyangdecai.com
-root: /tomee/blog/
+root: /blog/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
 # Directory
 source_dir: source
-public_dir: blog
+public_dir: public
 tag_dir: tags
 archive_dir: archives
 selections_dir: selections
@@ -69,7 +69,9 @@ theme: next
 deploy:
   type: git
 
-  repo: https://github.com/tomee-oy/blog.git
+  repo: 
+    github: https://github.com/tomee-oy/blog.git
+    coding: https://e.coding.net/tomee/blog.git
 
   branch: master
 
