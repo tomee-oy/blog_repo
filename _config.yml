@@ -11,8 +11,8 @@ language: zh-Hans
 timezone:
 
 # URL
-url: http://ouyangdecai.com
-root: /blog/
+url: blog.ouyangdecai.com
+root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
