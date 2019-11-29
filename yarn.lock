@@ -1196,6 +1196,13 @@ getpass@^0.1.1:
   dependencies:
     assert-plus "^1.0.0"
 
+gitment@0.0.3:
+  version "0.0.3"
+  resolved "http://172.16.11.82:4873/gitment/-/gitment-0.0.3.tgz#dbccbad7480b1345b656913bd70eff792a7b38b8"
+  integrity sha1-28y610gLE0W2VpE71w7/eSp7OLg=
+  dependencies:
+    mobx "^3.1.7"
+
 glob-base@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/glob-base/-/glob-base-0.3.0.tgz#dbb164f6221b1c0b1ccf82aea328b497df0ea3c4"
@@ -1334,10 +1341,9 @@ has-values@^1.0.0:
     is-number "^3.0.0"
     kind-of "^4.0.0"
 
-hexo-asset-image@^1.0.0:
-  version "1.0.0"
-  resolved "http://172.16.11.82:4873/hexo-asset-image/-/hexo-asset-image-1.0.0.tgz#f229ad28b071a32b1d5b121f929a296e714fd24a"
-  integrity sha1-8imtKLBxoysdWxIfkpopbnFP0ko=
+"hexo-asset-image@git+https://github.com/CodeFalling/hexo-asset-image.git":
+  version "0.0.5"
+  resolved "git+https://github.com/CodeFalling/hexo-asset-image.git#3c114cf0c0343ab28469635085b225fcae7fb9d3"
   dependencies:
     cheerio "^0.19.0"
     entities "^1.1.2"
@@ -2268,6 +2274,11 @@ mkdirp@0.5.x, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkd
   integrity sha1-MAV0OOrGz3+MR2fzhkjWaX11yQM=
   dependencies:
     minimist "0.0.8"
+
+mobx@^3.1.7:
+  version "3.6.2"
+  resolved "http://172.16.11.82:4873/mobx/-/mobx-3.6.2.tgz#fb9f5ff5090539a1ad54e75dc4c098b602693320"
+  integrity sha1-+59f9QkFOaGtVOddxMCYtgJpMyA=
 
 moment-timezone@^0.5.21:
   version "0.5.26"

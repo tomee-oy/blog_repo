@@ -7,7 +7,7 @@ title: 欧阳德才
 subtitle: day day no bug
 description:
 author: Tomee
-language: zh-Hans
+language: zh-CN
 timezone:
 
 # URL
@@ -74,10 +74,4 @@ deploy:
     coding: https://e.coding.net/tomee/blog.git
 
   branch: master
-
-# 多说评论配置
-#duoshuo_shortname: oydc
-
-# 百度统计配置
-baidu_analytics: 41fc030db57d5570dd22f78997dc4a7e
 
