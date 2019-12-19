@@ -4,7 +4,6 @@ date: 2019-12-16 09:47:43
 tags: [js]
 categories: 技术
 ---
-
 js中一些常用的方法，在项目开发中都是想到哪儿写到哪儿，难免有不周全之处，所以有必要归纳总结一下。
 
 #### 1、给`number`类型添加千分位符
@@ -30,63 +29,5 @@ js中一些常用的方法，在项目开发中都是想到哪儿写到哪儿，
   const getType = param => Object.prototype.toString.call(param).match(/(?<=^\[object\s)[^]+(?=\]$)/).toLowerCase()
 ```
 采用`object`的`toString`方法，会返回`[object xxx]`的形式，而`xxx`恰好就是参数的类型，然后用正则表达式去掉我们不需要的部分，保留类型，把首字母也转成小写即可。这里使用了`Object.prototype.toString.call()`的形式来得到包含类型的字符串，是因为其他基础类型改写了`object`的`toString`方法，比如，`number`的`toString`方法返回数字的字符串形式，`function`的`toString`返回定义方法的字符串形式，只有顶层的`object`的`toString`方法还保留着获取类型的功能。
-
-#### 3、常见排序的js实现
-
-##### 3.1 冒泡排序
-```javascript
-const bubbleSort = arr => {
-  const [length] = arr
-  for(let i = 0; i < length; i++) {
-    for(let j = 0; j < length - i - 1; j++) {
-      if (arr[j] > arr[j + 1]) {
-        [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]]
-      }
-    }
-  }
-  return arr
-}
-```
-每次从每一个数开始，与相邻的数比较，如果它比相邻的数大（以升序排列为例），则交换位置，然后进行下一次比较。所以每次比较完的最后一个数肯定是所有比较过的数当中最大的。这种算法的大O复杂度为O(n*n)。
-
-##### 3.2 选择排序
-```javascript
-const selectionSort = arr => {
-  const [length] = arr;
-  let minIndex;
-  for (let i = 0; i < length - 1; i++) {
-    minIndex = i;
-    for (let j = i + 1; j < length; j++) {
-      if (arr[j] < arr[minIndex]) {
-        minIndex = j
-      }
-    }
-    if (i !== minIndex) {
-      [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]];
-    }
-  }
-  return arr
-}
-```
-这种排序相当于每次锁定一个位置，然后用这个位置上的值与其后的所有值进行比较，记录下比锁定位置的值小的那个值的索引，本轮比较结束后将记录下位置的值与锁定位置的值进行交换，那么锁定位置就是最小值了。
-
-##### 3.3 插入排序
-```javascript
-const insertionSort = arr => {
-  const [length] = arr;
-  let temp;
-  for (let i = 1; i < length; i++) {
-    temp = arr[i]
-    let j = i - 1
-    while(j >= 0 && arr[j] > temp) {
-      arr[j + 1] = arr[j]
-      j--
-    }
-    arr[j + 1] = temp
-  }
-  return arr;
-};
-```
-插入排序的思想，就是保证`i`之前的所有值都是有序的。用`i`这个位置的值与前面的值从后往前比较，先把`i`处的值用`temp`存起来，以防在值移动过程中被覆盖。如果`j`处的值比`i`处的值大，那么把`j`处的值往后移一个位置，移到`j+1`处，把`j`这个位置空出来，然后`j--`进行下一次比较。如果此时`i`处的值比`j`处小或者相等了，那么也没必要再往前进行比较了，因为`i`之前的数都是有序的。那么把`i`处的值放在空出来的那个位置，即`j+1`这个位置，即完成插入排序。
 
 未完待续。。。
